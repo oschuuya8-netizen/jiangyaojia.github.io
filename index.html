@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* 简洁卡片 */
+        .card {
+            max-width: 650px;
+            width: 100%;
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.2s;
+        }
+        /* 头像 */
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid #e2e8f0;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        /* 姓名 */
+        .name {
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.3px;
+        }
+        /* 简短头衔/标签 */
+        .tag {
+            font-size: 0.9rem;
+            color: #4b5563;
+            background: #eef2ff;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+        /* 介绍段落 */
+        .bio {
+            font-size: 1.05rem;
+            color: #334155;
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+        /* 可选的联系方式（极简） */
+        .contact {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #5b6e8c;
+            border-top: 1px solid #eef2f6;
+            padding-top: 1.5rem;
+        }
+        .contact a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* 深色模式适配 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0f172a;
+            }
+            .card {
+                background: #1e293b;
+                color: #e2e8f0;
+            }
+            .bio {
+                color: #cbd5e1;
+            }
+            .tag {
+                background: #2d3a5e;
+                color: #b9d0f0;
+            }
+            .contact {
+                border-top-color: #334155;
+                color: #94a3b8;
+            }
+        }
+        /* 手机优化 */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem;
+            }
+            .avatar {
+                width: 110px;
+                height: 110px;
+            }
+            .name {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <!-- 头像区域：把 "myphoto.jpg" 换成你真实的照片文件名 -->
+    <img class="avatar" src="myphoto.jpg" alt="我的照片" onerror="this.src='https://placehold.co/140x140?text=📷+Photo'">
+    
+    <div class="name">蒋瑶佳</div>
+    <div class="tag">计算机专业研究生</div>
+    
+    <div class="bio">
+        <p>🎓 毕业于南京林业大学计算机系，目前在江南大学人工智能和计算机专业读研究生、</p>
+        <p>📬 联系邮箱：6253111003@stu.jiangnan.edu.cn</p>
+    </div>
+    
+
+</div>
+</body>
+</html>
